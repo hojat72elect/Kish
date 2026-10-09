@@ -18,3 +18,5 @@ this langauge should allow you to think and express yourself in the most human w
 It's very important to make this language more resilient and easier to work with compared to JS and Python. And also **it should be faster** than those 2.
 This whole langauge **should be written in fast and portable C++**. It should have a **pretty decent VM and GC** something like the occurrence counting GC that the swift lang has. I understand that this will be a breaking change from python and JS, but I want this lang to as strongly typed as fuck.
 
+No general-purpose programming language in this world will survive if it doesn't support and data-engineering at least to some point. Kish language should support **No SQL** databases through json, xml, and MongoDB. it should also be versed in **SQL** databases such as sqlite, MySQL, MariaDB, and PostGreSQL.
+
