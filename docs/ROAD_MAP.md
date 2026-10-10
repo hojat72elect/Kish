@@ -20,3 +20,4 @@ This whole langauge **should be written in fast and portable C++**. It should ha
 
 No general-purpose programming language in this world will survive if it doesn't support and data-engineering at least to some point. Kish language should support **No SQL** databases through json, xml, and MongoDB. it should also be versed in **SQL** databases such as sqlite, MySQL, MariaDB, and PostGreSQL.
 
+the source code written in Kish should transpile to JavaScript, work with web assembly, and natively run on iOS and Android.
