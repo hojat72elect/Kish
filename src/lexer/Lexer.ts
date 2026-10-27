@@ -47,9 +47,12 @@ export class Lexer {
                 // This is a white space
                 this.advance();
             } else if (this.currentCharacter === '/' && this.peek() === '/') {
-                // This is a single line comment
-                while (this.currentCharacter !== null && this.currentCharacter !== "\n") {
+                // This is a single line comment.
+                // We read through a local copy, because the check above narrows the field down to '/'.
+                let character: string | null = this.currentCharacter;
+                while (character !== null && character !== "\n") {
                     this.advance();
+                    character = this.currentCharacter;
                 }
             } else {
                 break;
