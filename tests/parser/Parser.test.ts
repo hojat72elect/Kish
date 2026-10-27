@@ -9,7 +9,6 @@ import type {FunctionDeclaration} from "../../src/parser/FunctionDeclaration.ts"
 import type {ClassDeclaration} from "../../src/parser/ClassDeclaration.ts";
 import type {LiteralExpression} from "../../src/parser/LiteralExpression.ts";
 import type {CallExpression} from "../../src/parser/CallExpression.ts";
-import type {IdentifierExpression} from "../../src/parser/IdentifierExpression.ts";
 
 /** Runs the real lexer, then the parser, over the given source. */
 const parse = (source: string): Program => new Parser(new Lexer(source).tokenize()).parse();
@@ -41,7 +40,6 @@ const asFunction = (node: Program["body"][number]): FunctionDeclaration => node 
 const asClass = (node: Program["body"][number]): ClassDeclaration => node as ClassDeclaration;
 const asLiteral = (node: Program["body"][number]): LiteralExpression => node as LiteralExpression;
 const asCall = (node: Program["body"][number]): CallExpression => node as CallExpression;
-const asIdentifier = (node: Program["body"][number]): IdentifierExpression => node as IdentifierExpression;
 
 /** The discriminator of any node, for tests that only care about the node kind. */
 const typeOf = (node: Program["body"][number]): string => (node as { type: string }).type;

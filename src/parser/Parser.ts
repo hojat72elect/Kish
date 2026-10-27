@@ -11,7 +11,7 @@ import type {ClassProperty} from "./ClassProperty.ts";
 import type {Expression} from "./Expression.ts";
 
 export class Parser {
-    private tokens: Token[];
+    private readonly tokens: Token[];
     private currentIndex: number = 0;
 
     constructor(tokens: Token[]) {

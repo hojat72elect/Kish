@@ -2,7 +2,7 @@ import type {Token} from "./Token.ts";
 import {TokenType} from "./TokenType.ts";
 
 export class Lexer {
-    private input: string;
+    private readonly input: string;
     private position: number = 0;
     private line: number = 1;
     private column: number = 1;
