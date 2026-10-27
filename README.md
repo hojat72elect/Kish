@@ -1,4 +1,4 @@
-# new-folder
+# Kish Programming Language
 
 To install dependencies:
 
@@ -6,10 +6,14 @@ To install dependencies:
 bun install
 ```
 
-To run:
+
+## Tests
+
+The test suite uses Bun's built-in test runner (`bun:test`), so it needs no extra dependencies.
 
 ```bash
-bun run index.ts
+bun test              # run every test once
 ```
 
-This project was created using `bun init` in bun v1.3.10. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+Tests live in `tests/` and mirror the layout of `src/`. Any file named `*.test.ts` under the project is picked up automatically.
+
