@@ -108,10 +108,12 @@ export class Lexer {
             if (this.currentCharacter === '"') {
                 this.advance() // the opening quote shouldn't be part of the string value
                 let value = "";
-
-                while (this.currentCharacter !== null && this.currentCharacter !== '"') {
-                    value += this.currentCharacter;
+                // We read through a local copy, because the check above narrows the field down to '"'.
+                let character: string | null = this.currentCharacter;
+                while (character !== null && character !== '"') {
+                    value += character;
                     this.advance();
+                    character = this.currentCharacter;
                 }
                 if (this.currentCharacter === '"') {
                     this.advance();// we ignore the closing quotes and then return
