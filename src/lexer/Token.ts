@@ -1,8 +1,8 @@
 import type {TokenType} from "./TokenType.ts";
 
-export interface Token {
+export type Token = {
     type: TokenType;
     value: string;
     line: number;
     column: number;
-}
+};
