@@ -17,3 +17,9 @@ bun test              # run every test once
 
 Tests live in `tests/` and mirror the layout of `src/`. Any file named `*.test.ts` under the project is picked up automatically.
 
+## Other checks
+
+```bash
+bun run typecheck     # tsc --noEmit, using the strict options in tsconfig.json
+bun run lint          # ESLint, with type-aware rules via typescript-eslint
+```
